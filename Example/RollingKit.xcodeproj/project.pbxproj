@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3BF671A6BE1953E1DC65289B /* Pods_RollingKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DD9182845B1FE72C5C870C /* Pods_RollingKit_Tests.framework */; };
+		50BE486B204C7CD10031910C /* PropertyStoringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE4868204C7CA10031910C /* PropertyStoringTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		C79A7E387C3A43B3B473C746 /* Pods_RollingKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BBA4ED6A86D154CF856A4E /* Pods_RollingKit_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0C34FC365357E6B2EAF1DB81 /* Pods-RollingKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollingKit_Example/Pods-RollingKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		50BE4868204C7CA10031910C /* PropertyStoringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStoringTests.swift; sourceTree = "<group>"; };
 		56DD9182845B1FE72C5C870C /* Pods_RollingKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollingKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* RollingKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollingKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,14 +40,13 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* RollingKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RollingKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		73E94AD0912B1C27F30D39BB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		73E94AD0912B1C27F30D39BB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		750076D9816D5DC810DFCD63 /* Pods-RollingKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollingKit_Example/Pods-RollingKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		81BBA4ED6A86D154CF856A4E /* Pods_RollingKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollingKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD48FD89E217124C5EDC6F01 /* RollingKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RollingKit.podspec; path = ../RollingKit.podspec; sourceTree = "<group>"; };
+		AD48FD89E217124C5EDC6F01 /* RollingKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RollingKit.podspec; path = ../RollingKit.podspec; sourceTree = "<group>"; };
 		C4E0192639E8A28B95F2364D /* Pods-RollingKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollingKit_Tests/Pods-RollingKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D636387E65D2BC9539A96154 /* Pods-RollingKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollingKit_Tests/Pods-RollingKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F9DC547F6E1A9736FFBC1F5F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F9DC547F6E1A9736FFBC1F5F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				50BE4868204C7CA10031910C /* PropertyStoringTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -220,6 +220,7 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -388,7 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				50BE486B204C7CD10031910C /* PropertyStoringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +527,7 @@
 			baseConfigurationReference = 750076D9816D5DC810DFCD63 /* Pods-RollingKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RollingKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -541,6 +543,7 @@
 			baseConfigurationReference = 0C34FC365357E6B2EAF1DB81 /* Pods-RollingKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RollingKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -555,6 +558,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D636387E65D2BC9539A96154 /* Pods-RollingKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -567,8 +573,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RollingKit_Example.app/RollingKit_Example";
 			};
 			name = Debug;
 		};
@@ -576,6 +584,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4E0192639E8A28B95F2364D /* Pods-RollingKit_Tests.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -584,8 +595,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RollingKit_Example.app/RollingKit_Example";
 			};
 			name = Release;
 		};
