@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-struct CircularCoords:Equatable {
+public struct CircularCoords:Equatable {
     var angle:CGFloat = 0.0, radius:CGFloat = 0.0
-    static func == (lhs: CircularCoords, rhs: CircularCoords) -> Bool {
+    public static func == (lhs: CircularCoords, rhs: CircularCoords) -> Bool {
         return lhs.angle == rhs.angle && lhs.radius == rhs.radius
     }
 }
@@ -25,7 +25,7 @@ extension UIView : PropertyStoring {
 
     }
     
-    var anchorPoint : CGPoint {
+    public var anchorPoint : CGPoint {
         get {
             let point : CGPoint =  getAssociatedObject(&StoredProperties.anchorPoint, defaultValue: StoredProperties.anchorPoint) as! CGPoint
 
@@ -43,7 +43,7 @@ extension UIView : PropertyStoring {
         }
     }
     
-    var circularPosition : CircularCoords {
+    public var circularPosition : CircularCoords {
         
         get {
             return getAssociatedObject(&StoredProperties.circularPosition, defaultValue: StoredProperties.circularPosition) as! CircularCoords

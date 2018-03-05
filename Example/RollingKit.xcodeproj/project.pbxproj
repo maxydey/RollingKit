@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3BF671A6BE1953E1DC65289B /* Pods_RollingKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DD9182845B1FE72C5C870C /* Pods_RollingKit_Tests.framework */; };
 		50BE486B204C7CD10031910C /* ViewExtentionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE4868204C7CA10031910C /* ViewExtentionTests.swift */; };
+		50BE486F204D4B410031910C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE486E204D4B410031910C /* Colors.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		0C34FC365357E6B2EAF1DB81 /* Pods-RollingKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollingKit_Example/Pods-RollingKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		50BE4868204C7CA10031910C /* ViewExtentionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtentionTests.swift; sourceTree = "<group>"; };
+		50BE486E204D4B410031910C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		50BE4870204D50EF0031910C /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		56DD9182845B1FE72C5C870C /* Pods_RollingKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollingKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* RollingKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollingKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,8 +96,10 @@
 		607FACD21AFB9204008FA782 /* Example for RollingKit */ = {
 			isa = PBXGroup;
 			children = (
+				50BE4870204D50EF0031910C /* Podfile */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				50BE486E204D4B410031910C /* Colors.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -381,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				50BE486F204D4B410031910C /* Colors.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
