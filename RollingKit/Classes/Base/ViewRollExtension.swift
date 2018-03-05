@@ -9,7 +9,14 @@ import Foundation
 import UIKit
 
 public struct CircularCoords:Equatable {
+    
     var angle:CGFloat = 0.0, radius:CGFloat = 0.0
+    public init() {}
+    public init(angle:CGFloat,radius:CGFloat) {
+        self.angle = angle
+        self.radius = radius
+    }
+
     public static func == (lhs: CircularCoords, rhs: CircularCoords) -> Bool {
         return lhs.angle == rhs.angle && lhs.radius == rhs.radius
     }
@@ -61,8 +68,8 @@ extension UIView : PropertyStoring {
         
         let anchor = superview!.anchorPoint
         var center = CGPoint()
-        let c = cos(coords.angle)
-        let s = sin(coords.angle)
+        let c = cos(coords.angle + CGFloat.pi/2)
+        let s = sin(coords.angle + CGFloat.pi/2)
         center.x = anchor.x + c * coords.radius
         center.y = anchor.y + s * coords.radius
         self.center = center

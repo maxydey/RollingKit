@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension FloatingPoint {
+    public var toRadians: Self { return self * .pi / 180 }
+    public var fromRadians: Self { return self * 180 / .pi }
+}
+

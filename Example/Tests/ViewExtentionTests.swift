@@ -72,7 +72,7 @@ class ViewCircularCoordinatesTests: QuickSpec {
                 view.circularPosition = coords
                 superView.anchorPoint = CGPoint(x: 70, y: 70)
                 it("should reset subview coordinates when superview anchor is reset") {
-                    expect(view.center).to(equal(CGPoint(x: 100, y: 70)))
+                    expect(view.center).to(equal(CGPoint(x: 70, y: 100)))
                 }
             }
         }

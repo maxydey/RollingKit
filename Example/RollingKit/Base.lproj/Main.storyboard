@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +21,90 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1LC-k4-aj5">
+                                <rect key="frame" x="29" y="622" width="153" height="31"/>
+                                <connections>
+                                    <action selector="itemRadiusChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="nbB-fe-nCu"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LEP-M7-CVT">
+                                <rect key="frame" x="193" y="622" width="153" height="31"/>
+                                <connections>
+                                    <action selector="circleRadiusChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ylu-Qy-VF8"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-nv-JUH">
+                                <rect key="frame" x="84.5" y="593" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PM6-Dm-9sR">
+                                <rect key="frame" x="248" y="593" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Sl-uC-4KC">
+                                <rect key="frame" x="29" y="543" width="153" height="31"/>
+                                <connections>
+                                    <action selector="numberChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="zmp-p7-c6y"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yKS-ne-3BM">
+                                <rect key="frame" x="193" y="543" width="153" height="31"/>
+                                <connections>
+                                    <action selector="angleChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="jf7-Bv-uIx"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uK0-SP-pjB">
+                                <rect key="frame" x="84" y="514" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLh-6Z-0vk">
+                                <rect key="frame" x="248" y="514" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LEP-M7-CVT" secondAttribute="trailing" constant="15" id="3KH-d7-7is"/>
+                            <constraint firstItem="yKS-ne-3BM" firstAttribute="top" secondItem="ZLh-6Z-0vk" secondAttribute="bottom" constant="8" id="5vN-ZH-esO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yKS-ne-3BM" secondAttribute="trailing" constant="15" id="6hj-7O-fkT"/>
+                            <constraint firstItem="LEP-M7-CVT" firstAttribute="leading" secondItem="1LC-k4-aj5" secondAttribute="trailing" constant="15" id="9bC-SE-SEW"/>
+                            <constraint firstItem="LEP-M7-CVT" firstAttribute="top" secondItem="PM6-Dm-9sR" secondAttribute="bottom" constant="8" id="G51-U0-WaK"/>
+                            <constraint firstItem="yKS-ne-3BM" firstAttribute="centerX" secondItem="ZLh-6Z-0vk" secondAttribute="centerX" id="HbY-EV-bWx"/>
+                            <constraint firstItem="PM6-Dm-9sR" firstAttribute="top" secondItem="yKS-ne-3BM" secondAttribute="bottom" constant="20" id="LUd-0N-O9q"/>
+                            <constraint firstItem="LEP-M7-CVT" firstAttribute="width" secondItem="1LC-k4-aj5" secondAttribute="width" id="N2r-bi-yE3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="LEP-M7-CVT" secondAttribute="bottom" constant="15" id="NQB-GA-Mfk"/>
+                            <constraint firstItem="1LC-k4-aj5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="15" id="OJh-fy-9dy"/>
+                            <constraint firstItem="yKS-ne-3BM" firstAttribute="width" secondItem="1Sl-uC-4KC" secondAttribute="width" id="PLf-rY-8aK"/>
+                            <constraint firstItem="yKS-ne-3BM" firstAttribute="leading" secondItem="1Sl-uC-4KC" secondAttribute="trailing" constant="15" id="Wre-9V-hW1"/>
+                            <constraint firstItem="1Sl-uC-4KC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="15" id="bha-Z4-KtP"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1LC-k4-aj5" secondAttribute="bottom" constant="15" id="eIV-WW-CIp"/>
+                            <constraint firstItem="1Sl-uC-4KC" firstAttribute="top" secondItem="uK0-SP-pjB" secondAttribute="bottom" constant="8" id="jh1-E0-HRg"/>
+                            <constraint firstItem="1LC-k4-aj5" firstAttribute="top" secondItem="fFm-nv-JUH" secondAttribute="bottom" constant="8" id="tTk-Yv-ml0"/>
+                            <constraint firstItem="1LC-k4-aj5" firstAttribute="centerX" secondItem="fFm-nv-JUH" secondAttribute="centerX" id="vuL-cx-Mn6"/>
+                            <constraint firstItem="1Sl-uC-4KC" firstAttribute="centerX" secondItem="uK0-SP-pjB" secondAttribute="centerX" id="wct-J5-FPP"/>
+                            <constraint firstItem="LEP-M7-CVT" firstAttribute="centerX" secondItem="PM6-Dm-9sR" secondAttribute="centerX" id="xR4-Zt-xhz"/>
+                            <constraint firstItem="fFm-nv-JUH" firstAttribute="top" secondItem="1Sl-uC-4KC" secondAttribute="bottom" constant="20" id="xVv-Eb-o0T"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="circleRadiusLabel" destination="PM6-Dm-9sR" id="AUh-k0-7wn"/>
+                        <outlet property="circleRadiusSlider" destination="LEP-M7-CVT" id="tSl-sT-1l0"/>
+                        <outlet property="itemRadiusSlider" destination="1LC-k4-aj5" id="aQ5-aL-zxE"/>
+                        <outlet property="itemsNumberLabel" destination="uK0-SP-pjB" id="TcX-BX-ZT0"/>
+                        <outlet property="itemsRadiusLabel" destination="fFm-nv-JUH" id="csr-p0-IMU"/>
+                        <outlet property="numberSlider" destination="1Sl-uC-4KC" id="ND9-Xd-P9w"/>
+                        <outlet property="stepLabel" destination="ZLh-6Z-0vk" id="r06-uh-Wk6"/>
+                        <outlet property="stepSlider" destination="yKS-ne-3BM" id="lsG-Mn-zA8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
