@@ -1,6 +1,8 @@
 use_frameworks!
+platform :ios, '9.0'
 
 target 'RollingKit_Example' do
+    
   pod 'RollingKit', :path => '../'
 
   target 'RollingKit_Tests' do
