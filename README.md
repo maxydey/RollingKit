@@ -1,9 +1,6 @@
 # RollingKit
 
-[![CI Status](http://img.shields.io/travis/Max/RollingKit.svg?style=flat)](https://travis-ci.org/Max/RollingKit)
-[![Version](https://img.shields.io/cocoapods/v/RollingKit.svg?style=flat)](http://cocoapods.org/pods/RollingKit)
-[![License](https://img.shields.io/cocoapods/l/RollingKit.svg?style=flat)](http://cocoapods.org/pods/RollingKit)
-[![Platform](https://img.shields.io/cocoapods/p/RollingKit.svg?style=flat)](http://cocoapods.org/pods/RollingKit)
+Project is barlly started, sorry, nothing to play with yet
 
 ## Example
 
