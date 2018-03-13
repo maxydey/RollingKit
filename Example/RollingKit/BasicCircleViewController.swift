@@ -8,7 +8,8 @@
 
 import UIKit
 import RollingKit
-
+import Foundation
+import CoreGraphics
 class BasicCircleViewController: UIViewController {
     
     @IBOutlet weak var stepLabel: UILabel!
@@ -81,7 +82,7 @@ class BasicCircleViewController: UIViewController {
     }
     
     func setupSubviews() {
-        
+        setupLabelsText()
         for v in views {
             v.removeFromSuperview()
         }
@@ -138,8 +139,23 @@ class BasicCircleViewController: UIViewController {
         circleRadiusSlider.value = Float(circleRadius)
     }
     
+    
+    lazy var formatter : NumberFormatter  = {
+        let frm = NumberFormatter()
+        frm.minimumFractionDigits = 0
+        frm.maximumFractionDigits = 0
+        return frm
+    }()
+    
     func setupLabelsText() {
         
+        stepLabel.text = "Offset angle: \(formatter.string(from:NSNumber(value:Float(angleStep)))!)˚"
+        itemsNumberLabel.text = "Count: \(numberOfItems)"
+        
+        
+        itemsRadiusLabel.text = "Radius: \(formatter.string(from:NSNumber(value:Float(itemRadius)))!)"
+        circleRadiusLabel.text = "Center distance: \(formatter.string(from:NSNumber(value:Float(circleRadius)))!)"
+
     }
     
 }
