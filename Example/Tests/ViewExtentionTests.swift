@@ -25,6 +25,7 @@ class ViewAnchorPointTests: QuickSpec {
             }
             
             context("Anchor point set") {
+                
                 let view = UIView.init(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
                 let point = CGPoint(x: 10, y: 10)
                 view.anchorPoint = point
@@ -75,6 +76,22 @@ class ViewCircularCoordinatesTests: QuickSpec {
                     expect(view.center).to(equal(CGPoint(x: 70, y: 100)))
                 }
             }
+            context("custom angle") {
+                
+                let superView = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+                superView.addSubview(view)
+                let coords = CircularCoords(angle: 0, radius: 30)
+                view.circularPosition = coords
+                
+                let angle = CGFloat(90.toRadians)
+                superView.startAngleOffset = angle
+
+                it("should reset subview coordinates when superview anchor is reset") {
+                    expect(view.center).to(equal(CGPoint(x: 20.0, y: 50.0)))
+                }
+            }
+            
         }
     }
 }

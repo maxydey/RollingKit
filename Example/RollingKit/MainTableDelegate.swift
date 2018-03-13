@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+class ScenesDataSource:NSObject, UITableViewDataSource  {
+    
+    let cellIdentifiers = ["BasicCircle","RollView"]
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellIdentifiers.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: cellIdentifiers[indexPath.row])!
+    }
+}

@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		387438C305F1F2C0C5336250 /* Pods_RollingKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3FD99528A50427BBAFF6D1 /* Pods_RollingKit_Tests.framework */; };
+		506EBB1A2057E29200D10BB5 /* RollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EBB192057E29200D10BB5 /* RollViewController.swift */; };
+		506EBB1E2057E85700D10BB5 /* MainTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EBB1D2057E85700D10BB5 /* MainTableDelegate.swift */; };
 		50BE486B204C7CD10031910C /* ViewExtentionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE4868204C7CA10031910C /* ViewExtentionTests.swift */; };
 		50BE486F204D4B410031910C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE486E204D4B410031910C /* Colors.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* BasicCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* BasicCircleViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		11B38B5462B2DF094C61D963 /* Pods-RollingKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollingKit_Tests/Pods-RollingKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		22E23C48111EBE752183825F /* Pods-RollingKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollingKit_Example/Pods-RollingKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		506EBB192057E29200D10BB5 /* RollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollViewController.swift; sourceTree = "<group>"; };
+		506EBB1D2057E85700D10BB5 /* MainTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableDelegate.swift; sourceTree = "<group>"; };
 		50BE4868204C7CA10031910C /* ViewExtentionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtentionTests.swift; sourceTree = "<group>"; };
 		50BE486E204D4B410031910C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		50BE4870204D50EF0031910C /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -38,7 +42,7 @@
 		607FACD01AFB9204008FA782 /* RollingKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollingKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* BasicCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCircleViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -81,6 +85,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		506EBB1B2057E2B900D10BB5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* BasicCircleViewController.swift */,
+				506EBB192057E29200D10BB5 /* RollViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		506EBB1C2057E84000D10BB5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				506EBB1D2057E85700D10BB5 /* MainTableDelegate.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +126,10 @@
 		607FACD21AFB9204008FA782 /* Example for RollingKit */ = {
 			isa = PBXGroup;
 			children = (
+				506EBB1C2057E84000D10BB5 /* Classes */,
 				50BE4870204D50EF0031910C /* Podfile */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				506EBB1B2057E2B900D10BB5 /* Controllers */,
 				50BE486E204D4B410031910C /* Colors.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -387,9 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* BasicCircleViewController.swift in Sources */,
 				50BE486F204D4B410031910C /* Colors.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				506EBB1E2057E85700D10BB5 /* MainTableDelegate.swift in Sources */,
+				506EBB1A2057E29200D10BB5 /* RollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
