@@ -9,7 +9,7 @@
 import UIKit
 import RollingKit
 
-class ViewController: UIViewController {
+class BasicCircleViewController: UIViewController {
     
     @IBOutlet weak var stepLabel: UILabel!
     @IBOutlet weak var itemsNumberLabel: UILabel!
@@ -60,6 +60,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         setupCircleView()
         setupSubviews()
+        
     }
     
     override func viewWillLayoutSubviews() {
