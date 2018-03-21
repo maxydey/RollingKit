@@ -140,21 +140,16 @@ class BasicCircleViewController: UIViewController {
     }
     
     
-    lazy var formatter : NumberFormatter  = {
-        let frm = NumberFormatter()
-        frm.minimumFractionDigits = 0
-        frm.maximumFractionDigits = 0
-        return frm
-    }()
+
     
     func setupLabelsText() {
         
-        stepLabel.text = "Offset angle: \(formatter.string(from:NSNumber(value:Float(angleStep)))!)˚"
+        stepLabel.text = "Offset angle: \(roundedFloatFormatter.string(from:NSNumber(value:Float(angleStep)))!)˚"
         itemsNumberLabel.text = "Count: \(numberOfItems)"
         
         
-        itemsRadiusLabel.text = "Radius: \(formatter.string(from:NSNumber(value:Float(itemRadius)))!)"
-        circleRadiusLabel.text = "Center distance: \(formatter.string(from:NSNumber(value:Float(circleRadius)))!)"
+        itemsRadiusLabel.text = "Radius: \(roundedFloatFormatter.string(from:NSNumber(value:Float(itemRadius)))!)"
+        circleRadiusLabel.text = "Center distance: \(roundedFloatFormatter.string(from:NSNumber(value:Float(circleRadius)))!)"
 
     }
     

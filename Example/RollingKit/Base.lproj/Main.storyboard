@@ -206,9 +206,24 @@
                     <view key="view" contentMode="scaleToFill" id="jhH-q9-MbE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUx-z8-334">
+                                <rect key="frame" x="16" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wUx-z8-334" firstAttribute="leading" secondItem="jhH-q9-MbE" secondAttribute="leadingMargin" id="LnI-BW-dKB"/>
+                            <constraint firstItem="wUx-z8-334" firstAttribute="top" secondItem="fuQ-xl-L8B" secondAttribute="bottom" constant="8" id="iP7-mk-2Q8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Roll View" id="Rb8-sl-0pI"/>
+                    <connections>
+                        <outlet property="rollOffsetLabel" destination="wUx-z8-334" id="I0r-vZ-PRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDE-Xp-LUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

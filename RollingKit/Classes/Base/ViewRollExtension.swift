@@ -8,20 +8,6 @@
 import Foundation
 import UIKit
 
-public struct CircularCoords:Equatable {
-    
-    var angle:CGFloat = 0.0, radius:CGFloat = 0.0
-    public init() {}
-    public init(angle:CGFloat,radius:CGFloat) {
-        self.angle = angle
-        self.radius = radius
-    }
-    
-    public static func == (lhs: CircularCoords, rhs: CircularCoords) -> Bool {
-        return lhs.angle == rhs.angle && lhs.radius == rhs.radius
-    }
-}
-
 extension UIView : PropertyStoring {
     
     public typealias T = Any
@@ -63,7 +49,7 @@ extension UIView : PropertyStoring {
         }
     }
     
-    public var circularPosition : CircularCoords {
+    public var circularPosition: CircularCoords {
         
         get {
             return getAssociatedObject(&StoredProperties.circularPosition, defaultValue: StoredProperties.circularPosition) as! CircularCoords
@@ -79,14 +65,34 @@ extension UIView : PropertyStoring {
         let coords = circularPosition
         if coords.angle.isNaN || coords.radius.isNaN {return}
         
-        let anchor = superview!.anchorPoint
-        var center = CGPoint()
-        let angle = coords.angle + superview!.startAngleOffset
-        let c = cos(angle + CGFloat.pi/2)
-        let s = sin(angle + CGFloat.pi/2)
-        center.x = anchor.x + c * coords.radius
-        center.y = anchor.y + s * coords.radius
         
-        self.center = center
+        self.center = superview!.location(from:coords)
+    }
+    
+    func coords(from: CGPoint) -> CircularCoords {
+        var coords = CircularCoords()
+        let fullCircle = CGFloat.pi*2
+        let catetus1 = from.x - anchorPoint.x
+        let catetus2 = from.y - anchorPoint.y
+        
+        
+        coords.radius = sqrt(catetus1 * catetus1 + catetus2*catetus2)
+        coords.angle = atan(catetus2/catetus1)
+        if  (catetus1 < 0){
+         coords.angle += fullCircle/2
+        }
+        coords.angle -= startAngleOffset
+        coords.angle -= fullCircle/4
+        if coords.angle < 0.0 {
+            coords.angle = fullCircle - (-coords.angle).truncatingRemainder(dividingBy:fullCircle)
+        }
+        
+        return coords
+    }
+    func location(from: CircularCoords) -> CGPoint {
+        let cosinus = cos(from.angle + startAngleOffset + CGFloat.pi/2)
+        let sinus = sin(from.angle + startAngleOffset + CGFloat.pi/2)
+        return CGPoint(x: anchorPoint.x + cosinus * from.radius,
+                       y: anchorPoint.y + sinus * from.radius)
     }
 }

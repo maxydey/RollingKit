@@ -8,7 +8,16 @@
 import Foundation
 import UIKit
 
-public class RollView: UIView {
+public protocol RollViewDelegate:AnyObject {
+    func rollViewDidRoll(rollView:RollView)
+    
+}
+
+
+open class RollView: UIView,UIGestureRecognizerDelegate {
+    
+    public weak var delegate:RollViewDelegate?
+    let gestureRecognizer = RollingGestureRecognizer()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,17 +33,22 @@ public class RollView: UIView {
     }
     
     func doInit() {
-        
-        self.layer.delegate = self
+        setupLayer()
+    setupGestureRecognizer()
         
     }
+    
+    func setupLayer() {
+        layer.delegate = self
+    }
+    func setupGestureRecognizer() {
+        gestureRecognizer.delegate = self
+    }
+    
     
     public var angleOffset:CGFloat = 0.0
     
-    override public func didAddSubview(_ subview: UIView) {
+    override open func didAddSubview(_ subview: UIView) {
         
     }
-    
-    
-    
 }

@@ -10,6 +10,7 @@
 		387438C305F1F2C0C5336250 /* Pods_RollingKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3FD99528A50427BBAFF6D1 /* Pods_RollingKit_Tests.framework */; };
 		506EBB1A2057E29200D10BB5 /* RollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EBB192057E29200D10BB5 /* RollViewController.swift */; };
 		506EBB1E2057E85700D10BB5 /* MainTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EBB1D2057E85700D10BB5 /* MainTableDelegate.swift */; };
+		506EBB202057FFC000D10BB5 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EBB1F2057FFC000D10BB5 /* Formatters.swift */; };
 		50BE486B204C7CD10031910C /* ViewExtentionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE4868204C7CA10031910C /* ViewExtentionTests.swift */; };
 		50BE486F204D4B410031910C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE486E204D4B410031910C /* Colors.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		22E23C48111EBE752183825F /* Pods-RollingKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollingKit_Example/Pods-RollingKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		506EBB192057E29200D10BB5 /* RollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollViewController.swift; sourceTree = "<group>"; };
 		506EBB1D2057E85700D10BB5 /* MainTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableDelegate.swift; sourceTree = "<group>"; };
+		506EBB1F2057FFC000D10BB5 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		50BE4868204C7CA10031910C /* ViewExtentionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtentionTests.swift; sourceTree = "<group>"; };
 		50BE486E204D4B410031910C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		50BE4870204D50EF0031910C /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				506EBB1D2057E85700D10BB5 /* MainTableDelegate.swift */,
+				506EBB1F2057FFC000D10BB5 /* Formatters.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				506EBB202057FFC000D10BB5 /* Formatters.swift in Sources */,
 				607FACD81AFB9204008FA782 /* BasicCircleViewController.swift in Sources */,
 				50BE486F204D4B410031910C /* Colors.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

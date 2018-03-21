@@ -1,6 +1,6 @@
 # RollingKit
 
-Project is barlly started, sorry, nothing to play with yet
+Project is barely started, sorry, nothing to play with yet
 
 ## Example
 

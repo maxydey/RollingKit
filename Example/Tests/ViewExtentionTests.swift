@@ -88,13 +88,67 @@ class ViewCircularCoordinatesTests: QuickSpec {
                 superView.startAngleOffset = angle
 
                 it("should reset subview coordinates when superview anchor is reset") {
-                    expect(view.center).to(equal(CGPoint(x: 20.0, y: 50.0)))
+                    expect([Double(view.center.x),Double(view.center.y)]).to(beCloseTo([20.0, 50.0], within:0.1))
                 }
             }
-            
         }
     }
 }
 
-
-
+class CoordsConversionsTests: QuickSpec {
+    override func spec() {
+        describe("Convert coordinates to point and back") {
+            context("to coords") {
+                let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                let point = CGPoint(x:100, y:50)
+                let coords = view.coords(from:point)
+                
+                it("should convert point to CircularCoords") {
+                    expect([Double(coords.angle).fromRadians,Double(coords.radius)]).to(beCloseTo([270.0,50.0], within: 1.0))
+                }
+            }
+            context("to coords 2") {
+                let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                let point = CGPoint(x:0, y:50)
+                let coords = view.coords(from:point)
+                it("should convert point to CircularCoords") {
+                    expect([Double(coords.angle).fromRadians,Double(coords.radius)]).to(beCloseTo([90, 50.0], within: 1.0))
+                }
+            }
+            context("to coords 3") {
+                let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                let point = CGPoint(x:50, y:0)
+                let coords = view.coords(from:point)
+                it("should convert point to CircularCoords") {
+                    expect([Double(coords.angle).fromRadians,Double(coords.radius)]).to(beCloseTo([180, 50.0], within: 1.0))
+                }
+            }
+            context("to coords 4") {
+                let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                let point = CGPoint(x:50, y:100)
+                let coords = view.coords(from:point)
+                it("should convert point to CircularCoords") {
+                    expect([Double(coords.angle).fromRadians,Double(coords.radius)]).to(beCloseTo([0, 50.0], within: 1.0))
+                }
+            }
+            context("to point") {
+                let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                let coords = CircularCoords(angle:CGFloat(90.0.toRadians), radius:50)
+                let point = view.location(from:coords)
+                
+                it("should convert CircularCoords coordinates to CGPoint") {
+                    expect([Double(point.x), Double(point.y)]).to(beCloseTo([0.0, 50.0], within:0.1))
+                }
+            }
+            context("to point 1") {
+                let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                let coords = CircularCoords(angle:CGFloat(270.0.toRadians), radius:50)
+                let point = view.location(from:coords)
+                
+                it("should convert CircularCoords coordinates to CGPoint") {
+                    expect([Double(point.x), Double(point.y)]).to(beCloseTo([100.0, 50.0], within:0.1))
+                }
+            }
+        }
+    }
+}
