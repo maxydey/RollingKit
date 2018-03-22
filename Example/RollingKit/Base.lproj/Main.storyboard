@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="sj9-lV-gq9">
-                            <rect key="frame" x="0.0" y="116" width="375" height="1"/>
+                            <rect key="frame" x="0.0" y="160" width="375" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -44,8 +44,28 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="Bg2-AJ-U0p"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RollView" textLabel="nkG-fb-MzV" style="IBUITableViewCellStyleDefault" id="zdp-Jp-AcK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RollGesture" textLabel="Bt5-F3-NuY" style="IBUITableViewCellStyleDefault" id="Acy-MM-nMF">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Acy-MM-nMF" id="tZg-eC-nxH">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Roll Gesture Recognizer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bt5-F3-NuY">
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="0Qx-iZ-pqx" kind="show" id="dqu-6V-BxE"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RollView" textLabel="nkG-fb-MzV" style="IBUITableViewCellStyleDefault" id="zdp-Jp-AcK">
+                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zdp-Jp-AcK" id="zHO-Zg-NKV">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -76,7 +96,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8u-vo-hGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="LV6-bG-g6X" customClass="ScenesDataSource" customModule="RollingKit_Example" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-431.19999999999999" y="62.518740629685162"/>
+            <point key="canvasLocation" x="-543" y="813"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fNr-gg-Rb9">
@@ -92,7 +112,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBR-rS-yVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1383" y="63"/>
+            <point key="canvasLocation" x="-1334" y="813"/>
         </scene>
         <!--Basic Circle-->
         <scene sceneID="ufC-wZ-h7g">
@@ -193,7 +213,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="502" y="-287"/>
+            <point key="canvasLocation" x="386" y="-129"/>
+        </scene>
+        <!--Gesture Recognizer-->
+        <scene sceneID="gJa-tR-2hm">
+            <objects>
+                <viewController id="0Qx-iZ-pqx" customClass="GestureViewController" customModule="RollingKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7t1-A7-SW5"/>
+                        <viewControllerLayoutGuide type="bottom" id="RV2-fR-1LA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LEt-eJ-RAe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koT-kt-wIF">
+                                <rect key="frame" x="16" y="72" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gesture Recognizer" id="B3B-yC-oRY"/>
+                    <connections>
+                        <outlet property="stateLabel" destination="koT-kt-wIF" id="3ma-Xd-878"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UfX-i1-hwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385" y="540"/>
         </scene>
         <!--Roll View-->
         <scene sceneID="HbI-wn-vtY">
@@ -227,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDE-Xp-LUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="502" y="366"/>
+            <point key="canvasLocation" x="385" y="1214"/>
         </scene>
     </scenes>
 </document>

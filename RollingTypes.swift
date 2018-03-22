@@ -19,4 +19,20 @@ public struct CircularCoords:Equatable {
     public static func == (lhs: CircularCoords, rhs: CircularCoords) -> Bool {
         return lhs.angle == rhs.angle && lhs.radius == rhs.radius
     }
+    
+    public static func + (lhs: CircularCoords, rhs: CircularCoords) -> CircularCoords {
+        var result = lhs
+        result.angle += rhs.angle
+        result.radius += rhs.radius
+        return result
+    }
+    
+    public static func - (lhs: CircularCoords, rhs: CircularCoords) -> CircularCoords {
+        var result = lhs
+        result.angle -= rhs.angle
+        result.radius -= rhs.radius
+        return result
+    }
+
+
 }

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class ScenesDataSource:NSObject, UITableViewDataSource  {
     
-    let cellIdentifiers = ["BasicCircle","RollView"]
+    let cellIdentifiers = ["BasicCircle","RollGesture", "RollView"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellIdentifiers.count
